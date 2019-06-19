@@ -47,21 +47,20 @@ namespace CroppingImageLibrary.SampleApp
 
         private void Load_Image()
         {
-            _croppingWindow = new CroppingWindow();
-            _croppingWindow.Closed += (a, b) => _croppingWindow = null;
-            _croppingWindow.Height = new BitmapImage(new Uri(image_list[0])).Height;
-            _croppingWindow.Width = new BitmapImage(new Uri(image_list[0])).Width;
+            if (image_list.Count > 0)
+            { _croppingWindow = new CroppingWindow();
+                _croppingWindow.Closed += (a, b) => _croppingWindow = null;
+                _croppingWindow.Height = new BitmapImage(new Uri(image_list[0])).Height;
+                _croppingWindow.Width = new BitmapImage(new Uri(image_list[0])).Width;
 
-            _croppingWindow.SourceImage.Source = new BitmapImage(new Uri(image_list[0]));
-            _croppingWindow.SourceImage.Height = new BitmapImage(new Uri(image_list[0])).Height;
-            _croppingWindow.SourceImage.Width = new BitmapImage(new Uri(image_list[0])).Width;
-            if (_croppingWindow.SourceImage.Height != 0 && _croppingWindow.SourceImage.Width !=0)
+                _croppingWindow.SourceImage.Source = new BitmapImage(new Uri(image_list[0]));
+                _croppingWindow.SourceImage.Height = new BitmapImage(new Uri(image_list[0])).Height;
+                _croppingWindow.SourceImage.Width = new BitmapImage(new Uri(image_list[0])).Width;
                 _croppingWindow.Show();
+            }
             else
             {
-                image_list.RemoveAt(pointer);
-                lstImagelist.ItemsSource = image_list;
-                Load_Image();
+                this.Close();
             }
 
         }
@@ -69,13 +68,18 @@ namespace CroppingImageLibrary.SampleApp
         private string getCropImageName()
         {
             string curPath = "null";
-            if ((pointer + 1) < image_list.Count)
-            {
-                image_list.RemoveAt(pointer);
-                lstImagelist.ItemsSource = image_list;
+            if (image_list.Count > 0)
+            {                
+                string old_path = Path.GetDirectoryName(image_list[0]);
+                curPath = image_list[0].Replace(old_path, output_path);
             }
-            string old_path = Path.GetDirectoryName(image_list[0]);
-            curPath = image_list[0].Replace(old_path,output_path);
+            else
+            {
+                this.Close();
+            }
+            image_list.RemoveAt(pointer);
+            lstImagelist.ItemsSource = image_list;
+
             return curPath;
         }
 
