@@ -1,0 +1,10 @@
+C:\Users\admin\Desktop\UI-Cropping-Image-master\UI-Cropping-Image-Library\CroppingImageLibrary\bin\x64\Debug\CroppingImageLibrary.dll
+C:\Users\admin\Desktop\UI-Cropping-Image-master\UI-Cropping-Image-Library\CroppingImageLibrary\bin\x64\Debug\CroppingImageLibrary.pdb
+C:\Users\admin\Desktop\UI-Cropping-Image-master\UI-Cropping-Image-Library\CroppingImageLibrary\obj\x64\Debug\CroppingImageLibrary.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\UI-Cropping-Image-master\UI-Cropping-Image-Library\CroppingImageLibrary\obj\x64\Debug\CroppingImageLibrary.dll
+C:\Users\admin\Desktop\UI-Cropping-Image-master\UI-Cropping-Image-Library\CroppingImageLibrary\obj\x64\Debug\CroppingImageLibrary.pdb
+C:\Users\admin\Desktop\UI-Cropping-Image-master\UI-Cropping-Image-Library\CroppingImageLibrary\bin\x64\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\admin\Desktop\UI-Cropping-Image-master\UI-Cropping-Image-Library\CroppingImageLibrary\bin\x64\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\admin\Desktop\UI-Cropping-Image-master\UI-Cropping-Image-Library\CroppingImageLibrary\bin\x64\Debug\Microsoft.WindowsAPICodePack.xml
+C:\Users\admin\Desktop\UI-Cropping-Image-master\UI-Cropping-Image-Library\CroppingImageLibrary\bin\x64\Debug\Microsoft.WindowsAPICodePack.Shell.xml
+C:\Users\admin\Desktop\UI-Cropping-Image-master\UI-Cropping-Image-Library\CroppingImageLibrary\obj\x64\Debug\CroppingImageLibrary.csproj.CopyComplete
