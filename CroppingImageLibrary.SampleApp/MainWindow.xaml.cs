@@ -48,7 +48,8 @@ namespace CroppingImageLibrary.SampleApp
         private void Load_Image()
         {
             if (image_list.Count > 0)
-            { _croppingWindow = new CroppingWindow();
+            {
+                _croppingWindow = new CroppingWindow();
                 _croppingWindow.Closed += (a, b) => _croppingWindow = null;
                 _croppingWindow.Height = new BitmapImage(new Uri(image_list[0])).Height;
                 _croppingWindow.Width = new BitmapImage(new Uri(image_list[0])).Width;

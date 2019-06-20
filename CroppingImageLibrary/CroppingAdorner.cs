@@ -97,9 +97,29 @@ namespace CroppingImageLibrary
                 parent.Arrange(new Rect(_originalCanvas.RenderSize));
             }
 
-            var crop = new CroppedBitmap(elementBitmap,
+            var crop = new CroppedBitmap();
+            if ((int) _rectangleManager.RectangleWidth > (int)_rectangleManager.RectangleHeight)
+            {
+                crop = new CroppedBitmap(elementBitmap,
+                new Int32Rect((int)_rectangleManager.TopLeft.X, (int)_rectangleManager.TopLeft.Y,
+                    (int)_rectangleManager.RectangleHeight, (int)_rectangleManager.RectangleHeight));
+            }
+            else if ((int) _rectangleManager.RectangleHeight > (int)_rectangleManager.RectangleWidth)
+            {
+                crop = new CroppedBitmap(elementBitmap,
+                new Int32Rect((int)_rectangleManager.TopLeft.X, (int)_rectangleManager.TopLeft.Y,
+                    (int)_rectangleManager.RectangleWidth, (int)_rectangleManager.RectangleWidth));
+            }
+            else if ((int)_rectangleManager.RectangleHeight == (int)_rectangleManager.RectangleWidth)
+            {
+                crop = new CroppedBitmap(elementBitmap,
                 new Int32Rect((int)_rectangleManager.TopLeft.X, (int)_rectangleManager.TopLeft.Y,
                     (int)_rectangleManager.RectangleWidth, (int)_rectangleManager.RectangleHeight));
+            }
+            //crop = new CroppedBitmap(elementBitmap,
+            //new Int32Rect((int)_rectangleManager.TopLeft.X, (int)_rectangleManager.TopLeft.Y,
+            //    (int)_rectangleManager.RectangleWidth, (int)_rectangleManager.RectangleHeight));
+
             return BitmapFrame.Create(crop);
         }
 
